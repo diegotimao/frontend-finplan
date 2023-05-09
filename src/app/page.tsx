@@ -1,9 +1,10 @@
 import { Inter } from 'next/font/google'
+import Login from './login/page'
 
 export default function Home() {
   return (
     <main>
-      <h1>Helo</h1>
+      <Login />
     </main>
   )
 }
