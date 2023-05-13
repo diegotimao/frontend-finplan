@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import BannerImage from '../../../public/banner-login.svg';
+import BannerImage from '../../../public/banner-in.svg';
 
 export default function Login() {
   const router = useRouter();
