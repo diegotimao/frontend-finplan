@@ -7,7 +7,7 @@ export default function Template({ children, }: { children: React.ReactNode }) {
   return (
     <div className="w-screen h-screen bg-neutral-50">
       <div className="flex">
-        <aside className="w-72 bg-black/90 h-screen flex flex-col border-r-2 border-r-stone-700">
+        <aside className="w-72 bg-black/80 h-screen flex flex-col border-r-2 border-r-stone-700">
           <div className="w-full h-20 grid items-center border-b border-b-stone-800">
             <Image src={logoImage} alt="Logom image" className="w-18 h-8" />
           </div>
@@ -31,7 +31,7 @@ export default function Template({ children, }: { children: React.ReactNode }) {
                   <Wallet />
                   Carteira
                 </a>
-                <a href="" className="hover:text-zinc-400 hover:border-l-2 border-white cursor-pointer font-light pl-6 flex items-center gap-3">
+                <a href="/compras" className="hover:text-zinc-400 hover:border-l-2 border-white cursor-pointer font-light pl-6 flex items-center gap-3">
                   <ShoppingBag />
                   Lista de Compras
                 </a>
@@ -67,7 +67,7 @@ export default function Template({ children, }: { children: React.ReactNode }) {
         </aside>
         <div className="flex-1">
           <header className="w-full h-20 grid items-center justify-items-center bg-white border-b border-zinc-300">
-            <div className="w-10/12 h-10 flex justify-between pl-1 pr-1">
+            <div className="w-10/12 h-20 m-auto xl:w-10/12 2xl:w-6/12 flex items-center justify-between pl-1 pr-1">
               <input type="text" placeholder="Pesquisar" className="w-96 h-10 rounded bg-zinc-400/20 pl-3 outline-none border border-zinc-700/20 text-black" />
               <div className="flex items-center">
                 <Image src={userImage} alt="User image" className="rounded-full h-10 w-10" />
@@ -75,8 +75,10 @@ export default function Template({ children, }: { children: React.ReactNode }) {
               </div>
             </div>
           </header>
-          <main>
-            {children}
+          <main className="w-full">
+            <div className="w-full">
+              {children}
+            </div>
           </main>
         </div>
       </div>
