@@ -9,7 +9,7 @@ export default function Template({ children, }: { children: React.ReactNode }) {
       <div className="flex">
         <aside className="w-72 bg-black/80 h-screen flex flex-col border-r-2 border-r-stone-700">
           <div className="w-full h-20 grid items-center border-b border-b-stone-800">
-            <Image src={logoImage} alt="Logom image" className="w-18 h-8" />
+            <Image src={logoImage} alt="Logom image" className="w-18 h-6" />
           </div>
 
           <div className="flex-1">
