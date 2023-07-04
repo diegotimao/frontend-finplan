@@ -22,30 +22,33 @@ export default function Login() {
   }
 
   return (
-    <div className="w-screen h-screen bg-zinc-900">
-      <div className="container flex flex-2 gap-3 m-auto">
-        <div className="h-screen w-6/12 p-12 grid grid-cols-1 items-center">
+    <div className="w-screen h-screen bg-white">
+      <div className="flex flex-2 gap-3 m-auto">
+        <div className="h-screen w-6/12 p-12 grid grid-cols-1 items-center bg-gradient-to-t bg-black/80">
           <Image src={BannerImage} alt="Banner Image" className='h-4/5' />
         </div>
         <div className="grid content-center h-screen w-6/12 p-20">
-          <div>
-            <h1 className="text-4xl/[2] font-bold font-sans text-white">Cadastro</h1>
-            <strong className="text-xl font-light mb-4 text-white">Preencha com seus dados e tenha uma experiência personalizada :)</strong>
+          <div className='p-10 max-w-xl'>
+            <h1 className="text-4xl/[2] font-extrabold font-sans text-black">Cadastro</h1>
+            <strong className="text-xl font-light mb-4 text-black">Preencha com seus dados e tenha uma experiência personalizada :)</strong>
 
             <form className="grid grid-cols-1 gap-3 mt-5" onSubmit={submitForm} method="POST">
-              <label className="border-indigo-500/75" htmlFor="">
-                <input type="text" name="nome" id="nome" placeholder="Nome" className="w-full h-14 border border-zinc-800 pl-3 bg-black text-white rounded-md outline-none" />
-              </label>
-              <label className="border-indigo-500/75" htmlFor="">
-                <input type="text" name="email" id="email" placeholder="Email" className="w-full h-14 border border-zinc-800 pl-3 bg-black text-white rounded-md outline-none" />
-              </label>
-              <label className="border-indigo-500/75" htmlFor="">
-                <input type="password" name="senha" id="senha" placeholder="Senha" className="w-full h-14 border border-zinc-800 pl-3 bg-black text-white rounded-md outline-none input[type='password']" />
-              </label>
-              <button type="submit" className="w-full mt-4 h-14 bg-blue-600 hover:bg-blue-600/80 border border-zinc-800 rounded-md text-white font-semibold">Cadastrar-se</button>
+              <fieldset className="border border-solid border-gray-600 h-16 w-full rounded-md">
+                <legend className='ml-3 pl-1 pr-1 text-md font-semibold text-zinc-600'>Nome</legend>
+                <input type="text" name="nome" id="nome" placeholder="Nome de usuário" className="w-full pl-4 rounded-sm outline-none placeholder-zinc-600/70" />
+              </fieldset>
+              <fieldset className="border border-solid border-gray-600 h-16 w-full rounded-md">
+                <legend className='ml-3 pl-1 pr-1 text-md font-semibold text-zinc-600'>Email</legend>
+                <input type="text" name="email" id="email" placeholder="useremail@gmail.com" className="w-full pl-4 rounded-sm outline-none placeholder-zinc-600/70" />
+              </fieldset>
+              <fieldset className="border border-solid border-gray-600 w-full h-16 rounded-md">
+                <legend className='ml-3 pl-1 pr-1 text-md font-semibold text-zinc-600'>Senha</legend>
+                <input type="password" name="senha" id="senha" placeholder="Senha (mínimo de 6 caracteres)" className="w-full pl-4 outline-none placeholder-zinc-600/70" />
+              </fieldset>
+              <button type="submit" className="w-full mt-4 h-14 bg-blue-400 hover:bg-blue-600/80 border rounded-md text-white font-semibold">Cadastrar-se</button>
             </form>
 
-            <p className='text-white mt-8'>Já tem cadastro? Vá para Login</p>
+            <p className='text-gray-900 mt-6'>Já tem cadastro? Vá para Login</p>
           </div>
         </div>
       </div>
