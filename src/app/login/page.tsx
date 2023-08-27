@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import BannerImage from '../../../public/banner-in.svg';
+import BannerImage from '../../../public/bannerImage.jpg';
 
 export default function Login() {
   const router = useRouter();
@@ -24,8 +24,8 @@ export default function Login() {
   return (
     <div className="w-screen h-screen bg-white">
       <div className="flex flex-2 gap-3 m-auto">
-        <div className="h-screen w-6/12 p-12 grid grid-cols-1 items-center bg-gradient-to-t bg-black/80">
-          <Image src={BannerImage} alt="Banner Image" className='h-4/5' />
+        <div className="h-screen w-6/12 p-5">
+          <Image src={BannerImage} alt="Banner Image" className='h-full w-full rounded-lg' />
         </div>
         <div className="grid content-center h-screen w-6/12 p-20">
           <div className='p-10 max-w-xl'>

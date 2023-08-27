@@ -38,7 +38,7 @@ export default function Compras() {
         </div>
 
         <div className="mt-6 flex justify-between items-center">
-          <p className="text-2xl font-semibold">Lista de compras</p>
+          <p className="text-2xl font-bold text-zinc-800">Lista de compras</p>
           <button className="w-40 h-11 bg-black text-white font-semibold rounded flex gap-1 justify-center items-center">
             <Plus />
             Criar lista
